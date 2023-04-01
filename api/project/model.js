@@ -2,8 +2,8 @@
 const db = require("../../data/dbConfig");
 
 async function getAllProjects() {
-  //   const result = await db("jj");
-  return "foo";
+  const result = await db("projects");
+  return result;
 }
 
 module.exports = {

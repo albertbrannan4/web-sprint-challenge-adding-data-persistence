@@ -5,7 +5,7 @@ const ProjectRouter = require("./project/router");
 const server = express();
 
 server.use(express.json());
-server.use("/api/project", ProjectRouter);
+server.use("/api/projects", ProjectRouter);
 
 server.get("*", (req, res) => {
   res.status(404).json("Page Not Found");
