@@ -8,7 +8,7 @@ server.use(express.json());
 server.use("/api/project", ProjectRouter);
 
 server.get("*", (req, res) => {
-  res.json("Page Not Found");
+  res.status(404).json("Page Not Found");
 });
 
 module.exports = server;
