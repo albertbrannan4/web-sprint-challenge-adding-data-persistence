@@ -16,7 +16,7 @@ router.post("/", (req, res, next) => {
       res.json(response);
     })
     .catch((err) => {
-      res.status(500).json({ message: "post not working right" });
+      res.status(500).json({ message: "post not working right for projects" });
     });
 });
 
