@@ -10,4 +10,14 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.post("/", (req, res, next) => {
+  Project.addProject(req.body)
+    .then((response) => {
+      res.json(response);
+    })
+    .catch((err) => {
+      res.status(500).json({ message: "post not working right" });
+    });
+});
+
 module.exports = router;
